@@ -1,15 +1,19 @@
 # include <iostream>
 
+const int MAX_SIZE = 100;
+
 class Location
 {
 private:
-	std::string			_street_name;
-	int					_street_number;
-	std::string			_owner_name;
+
+const std::string	_street_name;
+const int			_street_number;
+std::string			_owner_name;
 
 public:
 	Location( void );									// Canonical		Constructor Default
 	Location( std::string addr );
+	Location( std::string addr, int number );
 	Location( Location const & src );					// Canonical		Contructor Copy
 	~Location( void );									// Canonical		Destructor
 
@@ -21,18 +25,24 @@ public:
 };
 
 
-Location::Location( void ) {
+Location::Location( void ) : _street_name(""), _street_number(0) {
 	std::cout << "Default constructor called\n";
-	_street_number = 0;
+	// _street_name = "";
+	// _street_number = 0;
 }
 
-Location::Location( std::string addr ) {
+Location::Location( std::string addr ) : _street_name(addr), _street_number(0) {
 	std::cout << "Constructor with address called\n";
-	_street_name = addr;
-	_street_number = 0;
+	// _street_name = addr;
+	// _street_number = 0;
+}
+Location::Location( std::string addr, int number ) : _street_name(addr), _street_number(number) {
+	std::cout << "Constructor with address called\n";
+	// _street_name = addr;
+	// _street_number = number;
 }
 
-Location::Location( Location const & src ) {
+Location::Location( Location const & src ) : _street_name(src.getStreetName()), _street_number(src.getStreetNumber()) {
 	std::cout << "Copy constructor called\n";
 	*this = src;
 }
@@ -43,8 +53,8 @@ Location::~Location( void ) {
 
 Location &	Location::operator=( Location const & rhs ) {
 	std::cout << "Copy assignement operator called\n";
-	this->_street_name = rhs.getStreetName();
-	this->_street_number = rhs.getStreetNumber();
+	// this->_street_name = rhs.getStreetName();
+	// this->_street_number = rhs.getStreetNumber();
 	this->_owner_name = rhs.getOwnerName();
 	return *this;
 }
@@ -71,9 +81,9 @@ int main()
 {
 	Location loc1;
 	Location locA("");
-	Location loc2(loc1);
+	Location loc2(locA);
 	Location loc3;
-	loc3 = loc1;
+	loc2 = locA;
 
 	std::cout << sum() << std::endl;
 	std::cout << sum(1, 2) << std::endl;
