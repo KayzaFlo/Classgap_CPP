@@ -1,18 +1,14 @@
-#include "Dog.hpp"
+#include "Duck.hpp"
 #include <iostream>
 
 
-Dog::Dog(void) : Animal()
+Duck::Duck(void)
 {
-	std::cout << "Dog constructor called" << std::endl;
+	std::cout << "Duck constructor called" << std::endl;
 }
 
-Dog::~Dog(void)
+Duck::~Duck(void)
 {
-	std::cout << "Dog destructor called" << std::endl;
+	std::cout << "Duck destructor called" << std::endl;
 }
 
-void Dog::speak(void) const
-{
-	std::cout << "Dog says: Woof!" << std::endl;
-}

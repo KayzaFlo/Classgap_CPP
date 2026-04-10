@@ -15,3 +15,8 @@ void Swimmer::swim(void) const
 {
 	std::cout << "Something is swimming" << std::endl;
 }
+
+void Swimmer::move(void) const
+{
+	std::cout << "Swimmer is moving" << std::endl;
+}

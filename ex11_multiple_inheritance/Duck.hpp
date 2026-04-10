@@ -10,8 +10,10 @@ class Duck : public Walker, public Swimmer
 public:
 	Duck(void);
 	~Duck(void);
-	void walk(void) const;
-	void swim(void) const;
+	// void walk(void) const;
+	// void swim(void) const;
 };
+
+
 
 #endif

@@ -5,9 +5,9 @@ CFLAGS		= -Wall -Wextra -Werror -std=c++20
 
 #####	SOURCES		############################################################
 SRC			=	main.cpp \
-				Animal.cpp \
-				Dog.cpp \
-				Cat.cpp
+				Duck.cpp \
+				Swimmer.cpp \
+				Walker.cpp
 
 all:
 	g++ ${CFLAGS} $(SRC) -o $(NAME)

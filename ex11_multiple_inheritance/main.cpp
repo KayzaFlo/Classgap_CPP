@@ -10,6 +10,7 @@ int main(void)
 	Duck d;
 	d.walk();
 	d.swim();
+	d.move();
 
 	return (0);
 }

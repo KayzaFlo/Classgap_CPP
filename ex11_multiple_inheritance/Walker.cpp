@@ -15,3 +15,8 @@ void Walker::walk(void) const
 {
 	std::cout << "Something walks with " << _legs << " legs" << std::endl;
 }
+
+void Walker::move(void) const
+{
+	std::cout << "Walker is moving" << std::endl;
+}
