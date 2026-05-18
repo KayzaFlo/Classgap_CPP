@@ -10,7 +10,7 @@ private:
 	/* data */
 public:
 	Entity(/* args */);
-	~Entity();
+	virtual ~Entity();
 
 	virtual void Move() = 0;
 };

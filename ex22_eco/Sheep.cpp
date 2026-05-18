@@ -9,6 +9,6 @@ Sheep::~Sheep()
 }
 
 
-Sheep::Move() {
+void Sheep::Move() {
 	std::cout << "The sheep is moving" << std::endl;
 }
