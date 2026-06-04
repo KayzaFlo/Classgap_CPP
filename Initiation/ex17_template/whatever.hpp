@@ -23,8 +23,8 @@ using std::cout;
 using std::cerr;
 using std::endl;
 
-template< typename T >
-void	swap( T & x, T & y ) {
+template< typename T, typename C >
+void	swap( T & x, C & y ) {
 	T tmp;
 	tmp = x;
 	x = y;

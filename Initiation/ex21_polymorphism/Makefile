@@ -4,10 +4,7 @@ NAME		:= a.out
 CFLAGS		= -Wall -Wextra -Werror -std=c++20
 
 #####	SOURCES		############################################################
-SRC			=	main.cpp \
-			Entity.cpp \
-			Sheep.cpp \
-			Wolf.cpp
+SRC			=	main.cpp
 all:
 	g++ ${CFLAGS} $(SRC) -o $(NAME)
 
